@@ -92,7 +92,7 @@ void printSolution(const vector<string>& directions) {
             cout << " -> ";
         }
     }
-    cout << endl; // End the line after printing all directions
+    cout << endl;
 }
 
 // Function to convert state to string for hashing
@@ -110,7 +110,7 @@ string stateToString(const vector<vector<int>>& state) {
 bool AstarSearch(const vector<vector<int>>& startState, vector<string>& solutionPath, int& expandedNodes) {
     unordered_set<string> visited;
     unordered_map<string, int> gCost;
-    unordered_map<string, pair<vector<vector<int>>, string>> cameFrom; // To track the path
+    unordered_map<string, pair<vector<vector<int>>, string>> cameFrom;
     
     using StateCostPair = pair<int, vector<vector<int>>>;
     priority_queue<StateCostPair, vector<StateCostPair>, greater<StateCostPair>> pq;
